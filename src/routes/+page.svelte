@@ -1,59 +1,45 @@
-<script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+<script lang="ts">
+	import CategorySidebar from "$lib/components/CategorySidebar.svelte";
+	import SlideContent from "$lib/components/SlideContent.svelte";
 </script>
 
-<svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
-</svelte:head>
+<div class="navbar bg-base-100">
+	<a class="btn btn-ghost normal-case text-xl">Azure Security Concepts</a>
+</div>
 
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
+<!-- Main content goes here -->
+<div class="flex space-x-4 justify-center w-full">
 
-		to your new<br />SvelteKit app
-	</h1>
+	<div class="flex flex-col justify-center w-full pl-4">
+		<SlideContent />
+		<progress class="progress progress-accent w-full -top-2" value="30" max="100"></progress>
+	</div>
 
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
+	<div class="flex pr-4">
+		<ul class="menu bg-base-200 w-56 rounded-box" style="height: calc(100vh - 164px);">
+			<li>
+			<h2 class="menu-title">Title</h2>
+			<ul>
+				<li><a>Item 1</a></li>
+				<li><a>Item 2</a></li>
+				<li><a>Item 3</a></li>
+			</ul>
+			</li>
+		</ul>
+	</div>
+</div>
 
-	<Counter />
-</section>
+<div class="drawer">
+	<input id="my-drawer" type="checkbox" class="drawer-toggle" />
+	<div class="drawer-side">
+		<label for="my-drawer" class="drawer-overlay" />
+		<CategorySidebar />
+	</div>
+</div>
+
+<div class="flex justify-center w-full pt-5">
+	<label for="my-drawer" class="btn btn-primary drawer-button">Show All Concepts</label>
+</div>
 
 <style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
 </style>
