@@ -1,5 +1,5 @@
 <script lang="ts">
-    import TopicOAuth2OIDC from "$lib/components/oauth2_and_oidc/TopicOAuth2OIDC.svelte"
+    import Challenge1 from "$lib/components/challenge1/Challenge1.svelte"
     export let curSlide
 </script>
 
@@ -7,8 +7,8 @@
     Authentication and Authorization is really cool man.
 </div> -->
 
-{#if curSlide == "oauth2_and_oidc"}
-    <TopicOAuth2OIDC/>
+{#if curSlide == "challenge1"}
+    <Challenge1/>
 {:else}
     <div class="hero bg-base-200 rounded-box" style="height: calc(100vh - 164px);">
         <div class="hero-content text-center">

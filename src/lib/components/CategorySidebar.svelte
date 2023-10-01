@@ -4,14 +4,12 @@
 <div class="collapse collapse-arrow bg-base-200 menu p-4 w-80 min-h-full bg-base-200 text-base-content">
     <input type="radio" name="my-accordion-2" checked="checked" />
     <div class="collapse-title text-xl font-medium">
-        Authentication & Authorization
+        Storage accounts
     </div>
     <div class="collapse-content">
         <ul>
             <!-- Sidebar content here -->
-            <li><a>Open ID Connect (OIDC)</a></li>
-            <li><a>OAuth 2.0</a></li>
-            <li><a>SAML (coming soon)</a></li>
+            <li><a>Challenge 1: Beginner Blonky's Blunder</a></li>
         </ul>
     </div>
 </div>
