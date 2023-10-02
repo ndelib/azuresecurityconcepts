@@ -2,14 +2,19 @@
     import hacker1 from '$lib/assets/hacker1.jpg'
 </script>
 
-<div class="flex justify-center bg-base-200 w-full rounded-box" style="height: calc(100vh - 164px);">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10 justify-center bg-base-200 w-full rounded-box p-10" style="height: calc(100vh - 164px);">
 
-  <div class="card bg-base-100 shadow-xl m-10">
-    <figure><img src="{hacker1}" alt="Shoes" /></figure>
+  <div class="card bg-base-100 shadow-xl">
+
+    <div class="avatar">
+      <div class="w-full mask mask-hexagon">
+        <img src="{hacker1}" />
+      </div>
+    </div>
   </div>
 
-  <div class="card bg-base-100 shadow-xl m-10">
-    <div class="card-body w-96">
+  <div class="card bg-base-100 shadow-xl">
+    <div class="card-body w-full">
       <h2 class="card-title">Brief</h2>
       <p>If a dog chews shoes whose shoes does he choose? If a dog chews shoes whose shoes does he choose?If a dog chews shoes whose shoes does he choose?If a dog chews shoes whose shoes does he choose?If a dog chews shoes whose shoes does he choose?If a dog chews shoes whose shoes does he choose?</p>
       <h2 class="card-title">Difficulty</h2>
